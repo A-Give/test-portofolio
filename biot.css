@@ -1,0 +1,163 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0d1117;
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #161b22;
+}
+
+nav h2 {
+    font-size: 24px;
+    color: #58a6ff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #c9d1d9;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #58a6ff;
+}
+
+/* Layout Biodata */
+.bio-container {
+    display: flex;
+    justify-content: space-between; /* Data di kiri, foto di kanan */
+    align-items: center;
+    height: 80vh;
+    padding: 0 10%;
+}
+
+/* Bagian Data di Kiri */
+.bio-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left; /* Biar teks rata kiri */
+}
+
+.bio-text h3 {
+    font-size: 22px;
+    color: #58a6ff;
+}
+
+.bio-text h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.bio-text h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #8b949e;
+}
+
+.bio-text p {
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+/* Sosial Media */
+.social-links {
+    display: flex;
+    justify-content: flex-start; /* Ikon rata kiri */
+    gap: 20px; /* Jarak antar ikon */
+    margin-top: 20px;
+}
+
+.social-links a {
+    font-size: 30px; /* Ukuran ikon lebih besar */
+    color: #d50c1a;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+}
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff5858;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1f6feb;
+}
+
+/* Gambar Profil di Kanan */
+.bio-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.bio-image img {
+    width: 300px;
+    border-radius: 50%;
+    border: 5px solid #58a6ff;
+    box-shadow: 0 0 20px #58a6ff;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px #ff0000; }
+    to { box-shadow: 0 0 25px #58a6ff; }
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .bio-container {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .bio-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .bio-image {
+        margin-top: 20px;
+    }
+}
